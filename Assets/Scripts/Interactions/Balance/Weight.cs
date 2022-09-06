@@ -24,7 +24,7 @@ public class Weight : Drag
         if (targetPos.GetComponent<BalanceLine>().weights.Contains(gameObject))
         {
             targetPos.GetComponent<BalanceLine>().weights.Remove(this.gameObject);
-            Balance.instance.rightWeight -= weight;
+            //Balance.instance.rightWeight -= weight;
         }
 
 
@@ -47,7 +47,7 @@ public class Weight : Drag
         {
             
             targetPos.GetComponent<BalanceLine>().weights.Add(this.gameObject);
-            Balance.instance.rightWeight += weight;
+            //Balance.instance.rightWeight += weight;
         }
     }
 }
