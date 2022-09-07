@@ -5,100 +5,103 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/MainMenu.unity
     guid: 561e9a2d8820085498514afd59e3556f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/C1 Level 01 Wake Up.unity
     guid: 2929da94955f3424aa15e409fd4685aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/C1 Level 02 01 Dresser.unity
     guid: c20588945e8d21242817bdd2b5eb9162
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/C1 Level 02 04 SwipeMirror & DrawHand.unity
     guid: 84df2af074d80ab458ad1f61d13ae2eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/C1 Level 03 01 Transition1.unity
     guid: c0118d61eeb890e4ea0f6253cab1fe26
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/C1 Level 03 03 BackHome.unity
     guid: d04aab4554bdab24695c78a8725c0f03
   - enabled: 1
     path: Assets/Scenes/Chapter 1/C1 Level 03 04 Home&Jigsaw.unity
     guid: 1b8f33ae486540a49825049d5d6b763a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/C1 Level 03 06 Parents.unity
     guid: a13d2dd4d2933ca4884a854dd19524d8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 01 01 TakeDress.unity
     guid: 07c7d12fde93b2f41aaca0fc494dab74
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 01 05 ChildDress.unity
     guid: e8d09b9b8e656f84183c562e5a9009a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 02 01 Transition.unity
     guid: d7d098fbfa846dd4e9278a8af26a496b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 02 02 GetSchoolDress.unity
     guid: dfe67cfaf8cc0e645a61f17c1ff81883
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 03 02 XL.unity
     guid: cd21fbe090ddb79498952996f3e2196a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 04 01 Classroom.unity
     guid: 69d94d99347cac14e8ada9c9612206bd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 05 01 Dining Hall.unity
     guid: 31b28bcc7c88c4c4f86c21dd024a7baa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 05 02 Eat Alone.unity
     guid: 30908cd5209341e4e948070796d690df
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 2/C2 Level 06 01 Text.unity
     guid: 15f1e89f8e7bfaf4987cc8ceff0c0003
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 01 01 Meet.unity
     guid: 6f871aaf7dd93ba4c9dde998b3f927af
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 02 01 TakePhoto 01.unity
     guid: 02565e46387279046ab8241ced9e0f42
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 02 01 TakePhoto 02.unity
     guid: e58ffb6eeaa3c7a4db9bea037309fc56
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 02 01 TakePhoto 03.unity
     guid: 5e1c1848594b9e3468d734f76d9c331e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 03 01 WeddingBreathe.unity
     guid: c8dec3bd148b66c43a9545c7a8025643
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 03 02 Breathe.unity
     guid: 0daadee7216aa5147b6e106eae6824ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 04 01 Run.unity
     guid: 606c3f97412aa0f46a52cb5345e6aa12
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 04 02 Breakfast.unity
     guid: 1561b78a5e24b9f44be00e3500a54f39
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 05 01 HulaHoop.unity
     guid: c72bda61447d88f4a92f783818505cef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 05 02 Lunch.unity
     guid: 5440c0969c37b094db51ac8c70f26826
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 06 02 Dinner.unity
     guid: 5c5617a0872240e408cf37d58c8275ed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 07 01 Wall.unity
     guid: 86c966c57504cd649a722b40caf606a8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 08 01 Wedding Talk.unity
     guid: 5b0f5691e5ec94047a1ee2da813c67e5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 3/C3 Level 08 02 Wedding Rotate.unity
     guid: 4ff7014f0ceab404396bf65a38a25b84
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1/final.unity
     guid: fcf01e834ac648b4a838af18a206dba9
+  - enabled: 0
+    path: Assets/Scenes/PolishedScenedByLuShu/C1 Level 02 01 Dresser.unity
+    guid: f287ab0c5cb2f46e3a1c3679fbd734a8
   m_configObjects: {}
