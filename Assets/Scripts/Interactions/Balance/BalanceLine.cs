@@ -7,6 +7,9 @@ public class BalanceLine : MonoBehaviour
     public Transform targetPoint;
     public bool isWeight;
     public List<GameObject> weights;
+
+
+    
     void Start()
     {
         
@@ -15,8 +18,8 @@ public class BalanceLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = targetPoint.position - new Vector3(0, 2f, 0);
-        
+        //transform.position = targetPoint.position - new Vector3(0, 2f, 0);
+        transform.position = targetPoint.position;
         WeightPos();
     }
 
@@ -25,7 +28,8 @@ public class BalanceLine : MonoBehaviour
         int pos = 0;
         for (int i = 0; i < weights.Count; i++)
         {
-            weights[i].transform.position = transform.position - new Vector3(0, 2 + pos, 0);
+            weights[i].transform.position = transform.position - new Vector3(0, 2.5f + pos, 0);
+            weights[i].GetComponent<SpriteRenderer>().sortingOrder = 3-i;
             pos++;
         }
     }

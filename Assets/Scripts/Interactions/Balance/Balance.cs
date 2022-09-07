@@ -11,8 +11,9 @@ public class Balance : MonoBehaviour
     public static Balance instance;
     public bool rotating;
 
-    public int leftWeight;
-    public int rightWeight;
+    public float leftWeight;
+    public float rightWeight;
+    public float lastWeight;
 
     public bool isLeft;
     public bool isRight;
@@ -31,20 +32,20 @@ public class Balance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isLeft && (rightWeight > leftWeight))
-        {
-            StartCoroutine(RotateObject(transform, target, Vector3.forward, -30f, 2f));
-            isLeft = false;
-            isRight = true;
-            Debug.Log("111");
-        }
-        else if (isRight && leftWeight > rightWeight)
-        {
-            StartCoroutine(RotateObject(transform, target, Vector3.forward, 30f, 2f));
-            isLeft = true;
-            isRight = false;
-            Debug.Log("111");
-        }
+        // if (isLeft && (rightWeight > leftWeight))
+        // {
+        //     StartCoroutine(RotateObject(transform, target, Vector3.forward, -30f, 2f));
+        //     isLeft = false;
+        //     isRight = true;
+        //     Debug.Log("111");
+        // }
+        // else if (isRight && leftWeight > rightWeight)
+        // {
+        //     StartCoroutine(RotateObject(transform, target, Vector3.forward, 30f, 2f));
+        //     isLeft = true;
+        //     isRight = false;
+        //     Debug.Log("111");
+        // }
     }
     
     private IEnumerator RotateObject(Transform camTransform, Transform targetTransform, Vector3 rotateAxis, float degrees, float totalTime)
@@ -80,6 +81,14 @@ public class Balance : MonoBehaviour
         
 
         
+    }
+
+    public void BalanceDetect()
+    {
+        if (!rotating)
+        {
+            StartCoroutine(RotateObject(transform, target, Vector3.forward, -rightWeight + lastWeight, 1f));
+        }
     }
     
 }
