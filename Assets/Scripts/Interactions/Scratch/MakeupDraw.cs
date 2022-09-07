@@ -1,0 +1,85 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MakeupDraw : MonoBehaviour
+{
+    public Camera m_camera;
+
+    public GameObject lipstick;
+    public GameObject eyeshadow;
+    public GameObject eyeliner;
+    public GameObject blusher;
+
+    public GameObject currentBrush;
+    
+
+    private LineRenderer currentLineRenderer;
+    
+    private Vector2 lastPos;
+    
+
+    private void Update()
+    {
+        DrawLine();
+    }
+
+    void DrawLine()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+         
+            CreateBrush();
+        }
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+            if (mousePos != lastPos)
+            {
+                AddPoint(mousePos);
+                lastPos = mousePos;
+            }
+        }
+        else
+        {
+            currentLineRenderer = null;
+        }
+    }
+    
+    void CreateBrush()
+    {
+        GameObject brushInstance = Instantiate(currentBrush);
+        currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
+
+        Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+        
+        currentLineRenderer.SetPosition(0,mousePos);
+        currentLineRenderer.SetPosition(1,mousePos);
+    }
+
+    void AddPoint(Vector2 pointPos)
+    {
+        currentLineRenderer.positionCount++;
+        int positionIndex = currentLineRenderer.positionCount - 1;
+        currentLineRenderer.SetPosition(positionIndex,pointPos);
+    }
+
+    public void ChangeBrush(string brushName)
+    {
+        switch (brushName)
+        {
+            case "lipstick":
+                currentBrush = lipstick;
+                break;
+            case "eyeshadow":
+                currentBrush = eyeshadow;
+                break;
+            case "eyeliner":
+                currentBrush = eyeliner;
+                break;
+            case "blusher":
+                currentBrush = blusher;
+                break;
+        }
+    }
+}
