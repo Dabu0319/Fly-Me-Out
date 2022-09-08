@@ -1,7 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum Brush
+{
+    None,Eyeliner, Eyeshadow, Blusher, Lipstick
+}
 public class MakeupDraw : MonoBehaviour
 {
     public Camera m_camera;
@@ -17,33 +23,98 @@ public class MakeupDraw : MonoBehaviour
     private LineRenderer currentLineRenderer;
     
     private Vector2 lastPos;
-    
+
+    private Vector2 mousePos;
+    private Camera cam;
+
+    public Brush brushType = Brush.None;
+
+    private void Start()
+    {
+        m_camera = Camera.main;
+    }
 
     private void Update()
     {
-        DrawLine();
+        
+        mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    private void OnMouseDown()
+    {
+        if (brushType == Brush.Blusher)
+        {
+            Debug.Log("111");
+            mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+            Instantiate(currentBrush, mousePos, Quaternion.identity);
+        }
+        else
+        {
+            CreateBrush();
+        }
+        
+
+        
+        Debug.Log("222");
+    }
+
+    private void OnMouseDrag()
+    {
+        switch (brushType)
+        {
+            case Brush.Lipstick:
+                
+                DrawLine();
+                break;
+            
+            
+            case Brush.Eyeliner:
+                
+                DrawLine();
+                break;
+            
+            
+            
+            case Brush.Eyeshadow:
+                
+                DrawLine();
+                break;
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        currentLineRenderer = null;
     }
 
     void DrawLine()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        // {
+        //  
+        //     CreateBrush();
+        // }
+        
+        // if(Input.GetKey(KeyCode.Mouse0))
+        // {
+        //     Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+        //     if (mousePos != lastPos)
+        //     {
+        //         AddPoint(mousePos);
+        //         lastPos = mousePos;
+        //     }
+        // }
+        
+        Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+        if (mousePos != lastPos)
         {
-         
-            CreateBrush();
+            AddPoint(mousePos);
+            lastPos = mousePos;
         }
-        if(Input.GetKey(KeyCode.Mouse0))
-        {
-            Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
-            if (mousePos != lastPos)
-            {
-                AddPoint(mousePos);
-                lastPos = mousePos;
-            }
-        }
-        else
-        {
-            currentLineRenderer = null;
-        }
+        // else
+        // {
+        //     currentLineRenderer = null;
+        // }
     }
     
     void CreateBrush()
@@ -70,15 +141,19 @@ public class MakeupDraw : MonoBehaviour
         {
             case "lipstick":
                 currentBrush = lipstick;
+                brushType = Brush.Lipstick;
                 break;
             case "eyeshadow":
                 currentBrush = eyeshadow;
+                brushType = Brush.Eyeshadow;
                 break;
             case "eyeliner":
                 currentBrush = eyeliner;
+                brushType = Brush.Eyeliner;
                 break;
             case "blusher":
                 currentBrush = blusher;
+                brushType = Brush.Blusher;
                 break;
         }
     }

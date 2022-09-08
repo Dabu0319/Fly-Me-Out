@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DragCamera : Drag
+public class DragRope : Drag
 {
     public float scopeXMax;
     public float scopeXMin;
@@ -22,9 +22,10 @@ public class DragCamera : Drag
 
     public bool targetEvent = false;
     public UnityEvent afterDrag;
-    
-    
 
+    public GameObject targetImage;
+
+    public Color targetColor;
    
     void Start()
     {
@@ -34,6 +35,7 @@ public class DragCamera : Drag
     // Update is called once per frame
     void Update()
     {
+
         if (targetEvent && transform.position.x < targetXMax && transform.position.x > targetXMin &&
             transform.position.y < targetYMax && transform.position.y > targetYMin)
         {
@@ -41,7 +43,9 @@ public class DragCamera : Drag
             //GuideManager.instance.succeed = true;
             canDrag = false;
         }
+
     }
+        
 
 
     public override void OnMouseDrag()
@@ -67,22 +71,14 @@ public class DragCamera : Drag
                 transform.position=new Vector2(transform.position.x,scopeYMin);
             }
         }
+        
+        targetColor.a = (float)(0.5 +
+                                (transform.position.y - scopeYMax) * 0.5 / (scopeYMax - scopeYMin));
+        
+        Debug.Log(targetColor.a);
+        targetImage.GetComponent<SpriteRenderer>().color = targetColor;
 
 
-        if (targetDetect)
-        {
-            if (transform.position.x < targetXMax && transform.position.x > targetXMin &&
-                transform.position.y < targetYMax && transform.position.y > targetYMin)
-            {
-                activeFrame.SetActive(true);
-                defaultFrame.SetActive(false);
-            }
-            else
-            {
-                activeFrame.SetActive(false);
-                defaultFrame.SetActive(true);
-            }
-        }
 
 
 
