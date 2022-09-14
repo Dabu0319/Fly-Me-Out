@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 1331321643}
   barValue: 0
-  speed: 0.1
+  speed: 0.2
   isBreatheIn: 0
   stageNum: 0
   stageBottom:
