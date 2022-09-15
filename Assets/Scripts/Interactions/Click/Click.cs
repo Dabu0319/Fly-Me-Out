@@ -85,7 +85,6 @@ public class Click : MonoBehaviour
             EventHandler.CallCameraTransEvent(camTarget,camSpeed,afterCamObj);
 
         }
-        
  
 
         if (nextLevelButton)
@@ -115,10 +114,10 @@ public class Click : MonoBehaviour
         {
             isZoom = true;
         }
-        
 
 
-        
+
+
     }
 
     public void Active()

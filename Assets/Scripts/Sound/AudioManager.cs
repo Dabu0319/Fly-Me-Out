@@ -50,6 +50,11 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
+        if (name != bgm)
+        {
+            bgm = name;
+        }
+
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
@@ -81,4 +86,5 @@ public class AudioManager : MonoBehaviour
             
         s.source.Stop();
     }
+
 }

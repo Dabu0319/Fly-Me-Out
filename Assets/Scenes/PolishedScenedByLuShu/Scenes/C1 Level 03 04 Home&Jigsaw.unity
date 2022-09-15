@@ -1179,6 +1179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013010378}
   - component: {fileID: 1013010377}
+  - component: {fileID: 1013010379}
   m_Layer: 0
   m_Name: JigsawManager
   m_TagString: Untagged
@@ -1222,6 +1223,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1013010379}
+        m_TargetAssemblyTypeName: SoundEffectManager, Assembly-CSharp
+        m_MethodName: PlaySoundOnce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1013010378
 Transform:
   m_ObjectHideFlags: 0
@@ -1237,6 +1250,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1013010379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013010376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: fb79beceb1cb84cce8a53a9dce57186c, type: 3}
+  playOnceWhenClick: 0
+  playOnceWhenSceneAwake: 0
 --- !u!1001 &1013576380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2212,6 +2240,7 @@ GameObject:
   - component: {fileID: 1235562085}
   - component: {fileID: 1235562084}
   - component: {fileID: 1235562083}
+  - component: {fileID: 1235562087}
   m_Layer: 0
   m_Name: "\u7236\u6BCD\u5435\u67B6 \u684C\u5B50\u788E\u7247"
   m_TagString: Untagged
@@ -2347,6 +2376,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1235562087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235562082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: de1fd5e978ba54b7a9e538ad4facb4cd, type: 3}
+  playOnceWhenClick: 1
+  playOnceWhenSceneAwake: 0
 --- !u!1 &1239694631
 GameObject:
   m_ObjectHideFlags: 0

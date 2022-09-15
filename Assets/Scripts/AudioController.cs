@@ -28,10 +28,10 @@ public class AudioController : MonoBehaviour
 
         if (mainMenu)
         {
-
-            AudioManager.instance.Stop("Child");
-            AudioManager.instance.Stop("BackHome");
-            AudioManager.instance.Stop("Start");
+            AudioManager.instance.Stop(AudioManager.instance.bgm);
+            //AudioManager.instance.Stop("Child");
+            //AudioManager.instance.Stop("BackHome");
+            //AudioManager.instance.Stop("Start");
             
         }
         

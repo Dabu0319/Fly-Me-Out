@@ -232,6 +232,9 @@ MonoBehaviour:
   camSpeed: 0.1
   nextLevelButton: 0
   buttonTime: 0
+  camZoomOut: 0
+  zoomSpeed: 0
+  targetSize: 0
   afterCamObj: []
   inActiveObj: []
   activeObj: []
@@ -239,6 +242,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isZoom: 0
 --- !u!61 &212857743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -422,6 +426,9 @@ MonoBehaviour:
   camSpeed: 0.1
   nextLevelButton: 0
   buttonTime: 0
+  camZoomOut: 0
+  zoomSpeed: 0
+  targetSize: 0
   afterCamObj: []
   inActiveObj: []
   activeObj:
@@ -430,6 +437,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isZoom: 0
 --- !u!61 &1055270712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -907,6 +915,9 @@ MonoBehaviour:
   camSpeed: 0.1
   nextLevelButton: 1
   buttonTime: 0
+  camZoomOut: 0
+  zoomSpeed: 0
+  targetSize: 0
   afterCamObj: []
   inActiveObj: []
   activeObj: []
@@ -914,6 +925,27 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isZoom: 0
+--- !u!1 &1718828043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1007759126502885328, guid: 2926f34e3de1d07478edf656fa595eed, type: 3}
+  m_PrefabInstance: {fileID: 2005491223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1718828046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718828043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 791f468730d2b4750980d2911890d257, type: 3}
+  playOnceWhenClick: 0
+  playOnceWhenSceneAwake: 1
 --- !u!1 &1783695102
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +989,9 @@ MonoBehaviour:
   camSpeed: 0.1
   nextLevelButton: 0
   buttonTime: 0
+  camZoomOut: 0
+  zoomSpeed: 0
+  targetSize: 0
   afterCamObj: []
   inActiveObj: []
   activeObj:
@@ -977,6 +1012,7 @@ MonoBehaviour:
           m_StringArgument: DoorOpen
           m_BoolArgument: 0
         m_CallState: 2
+  isZoom: 0
 --- !u!61 &1783695104
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1102,6 +1138,7 @@ GameObject:
   - component: {fileID: 1969673920}
   - component: {fileID: 1969673919}
   - component: {fileID: 1969673918}
+  - component: {fileID: 1969673922}
   m_Layer: 0
   m_Name: 3-2 (1)
   m_TagString: Untagged
@@ -1132,6 +1169,9 @@ MonoBehaviour:
   camSpeed: 0.1
   nextLevelButton: 0
   buttonTime: 0
+  camZoomOut: 0
+  zoomSpeed: 0
+  targetSize: 0
   afterCamObj: []
   inActiveObj: []
   activeObj:
@@ -1140,6 +1180,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isZoom: 0
 --- !u!61 &1969673919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1233,6 +1274,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969673922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969673917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 5ffece51bd031423097577cf0b55c0e2, type: 3}
+  playOnceWhenClick: 1
+  playOnceWhenSceneAwake: 0
 --- !u!1001 &2005491223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1464,3 +1520,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4512128d0d0dea7418e0cd30c80cdef7, type: 3}
+--- !u!1 &6600582098222321470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8622550500630945831, guid: 4512128d0d0dea7418e0cd30c80cdef7, type: 3}
+  m_PrefabInstance: {fileID: 6600582098222321469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6600582098222321474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600582098222321470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 791f468730d2b4750980d2911890d257, type: 3}
+  playOnceWhenClick: 1
+  playOnceWhenSceneAwake: 0

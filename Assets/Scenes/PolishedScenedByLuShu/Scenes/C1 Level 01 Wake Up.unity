@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &38122161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2302036296608812602, guid: 95132c1067258ab4d8c9091ccbc9f372, type: 3}
-  m_PrefabInstance: {fileID: 1055589455}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &53625258
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +223,6 @@ MonoBehaviour:
   speed: 0.5
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
-  isImage: 0
 --- !u!1001 &114330374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,6 +241,10 @@ PrefabInstance:
     - target: {fileID: 8307129589202151061, guid: a81fdcc4dfdc3a346909298dea1ae63e, type: 3}
       propertyPath: m_Name
       value: CM vcam1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307129589202151062, guid: a81fdcc4dfdc3a346909298dea1ae63e, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 0.46205357
       objectReference: {fileID: 0}
     - target: {fileID: 8307129589202151063, guid: a81fdcc4dfdc3a346909298dea1ae63e, type: 3}
       propertyPath: m_RootOrder
@@ -458,7 +456,6 @@ MonoBehaviour:
   speed: 1
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
-  isImage: 0
 --- !u!1 &724858118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1513,6 @@ MonoBehaviour:
   speed: 0.3
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
-  isImage: 0
 --- !u!1 &1281821709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,22 +1755,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 2302036296608812601, guid: 95132c1067258ab4d8c9091ccbc9f372, type: 3}
   m_PrefabInstance: {fileID: 1055589455}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1601661660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38122161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58dfd9281239746bbb6bc34158992d93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progress: 0.485
-  archHeight: 0.246
-  shader: {fileID: 4800000, guid: b93a82af255fa428b9c28a5906f52c86, type: 3}
-  material: {fileID: 0}
 --- !u!1 &1763797795
 GameObject:
   m_ObjectHideFlags: 0

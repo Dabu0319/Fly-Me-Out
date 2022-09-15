@@ -49,42 +49,42 @@ public class AwakeScreenEffect : MonoBehaviour
         Graphics.Blit(src, dest, material);
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            if (progress > 1f || archHeight > 0.3f)
-            {
-                opening = false;
-                return;
-            }
-            else
-            {
-                progress += 0.001f;
-                archHeight += 0.0005f;
-            }
-        }
-        else if (opening)
-        {
-            if (progress <= 0f || archHeight <= 0f)
-            {
-                return;
-            }
-            else
-            {
-                progress -= 0.001f;
-                archHeight -= 0.0005f;
-            }
-        } else
-        {
-            if (progress < 1f)
-            {
-                progress += 0.001f;
-            }
-            if (archHeight < 3f)
-            {
-                archHeight += 0.0005f;
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetMouseButton(0))
+    //    {
+    //        if (progress > 1f || archHeight > 0.3f)
+    //        {
+    //            opening = false;
+    //            return;
+    //        }
+    //        else
+    //        {
+    //            progress += 0.001f;
+    //            archHeight += 0.0005f;
+    //        }
+    //    }
+    //    else if (opening)
+    //    {
+    //        if (progress <= 0f || archHeight <= 0f)
+    //        {
+    //            return;
+    //        }
+    //        else
+    //        {
+    //            progress -= 0.001f;
+    //            archHeight -= 0.0005f;
+    //        }
+    //    } else
+    //    {
+    //        if (progress < 1f)
+    //        {
+    //            progress += 0.001f;
+    //        }
+    //        if (archHeight < 3f)
+    //        {
+    //            archHeight += 0.0005f;
+    //        }
+    //    }
+    //}
 }
