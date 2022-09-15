@@ -115,11 +115,15 @@ namespace ScratchCardAsset
 			if (cardInput.IsScratching)
 			{
 				cardInput.Scratch();
+
+				if (!soundEffectManager) return;
 				soundEffectManager.PlaySoundLoop();
 			}
 			else
 			{
 				cardRenderer.IsScratched = false;
+
+				if (!soundEffectManager) return;
 				soundEffectManager.StopSound();
 			}
 

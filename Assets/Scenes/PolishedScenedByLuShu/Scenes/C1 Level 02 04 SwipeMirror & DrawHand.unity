@@ -1117,7 +1117,7 @@ PrefabInstance:
     - target: {fileID: 11474202, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
       propertyPath: soundEffectManager
       value: 
-      objectReference: {fileID: 682391431}
+      objectReference: {fileID: 0}
     - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
       propertyPath: RenderType
       value: 1
@@ -1489,7 +1489,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 137284, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
   m_PrefabInstance: {fileID: 560673556}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &682391431
+--- !u!114 &682391434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
