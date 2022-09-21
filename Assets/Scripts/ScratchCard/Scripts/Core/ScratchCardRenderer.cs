@@ -60,6 +60,8 @@ namespace ScratchCardAsset.Core
 			if (scratchCard.Progress.HasProperty(SourceTexProperty))
 			{
 				scratchCard.Progress.SetTexture(SourceTexProperty, scratchCard.ScratchSurface.mainTexture);
+				
+				
 			}
 			rti = new RenderTargetIdentifier(scratchCard.RenderTexture);
 		}

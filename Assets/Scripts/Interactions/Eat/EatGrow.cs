@@ -6,17 +6,28 @@ using UnityEngine;
 public class EatGrow : MonoBehaviour
 {
     public List<GameObject> eatObjects;
+    
+    public float growRate = 0.1f;
+    public float maxScale = 10f;
+
+    public int i;
     void Start()
     {
+        StartCoroutine(Test());
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     Debug.Log("111");
+        //     i += 1;
+        // }
     }
 
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("EatObjects"))
@@ -25,7 +36,7 @@ public class EatGrow : MonoBehaviour
             eatObjects.Remove(col.gameObject);
             this.transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
 
-            GetComponent<SpriteRenderer>().color -= new Color(0.1f, 0.1f, 0.1f, 0f);
+            GetComponent<SpriteRenderer>().color -= new Color(growRate, growRate, growRate, 0f);
 
             //random color
             Camera.main.backgroundColor = UnityEngine.Random.ColorHSV();
@@ -37,11 +48,28 @@ public class EatGrow : MonoBehaviour
             }
             
             //drag slow down
-            GetComponent<Drag>()._speed -= 10f;
+            GetComponent<Drag>()._speed -= maxScale;
         }
     }
     
-    //Change color darker
+    
+
+
+
+
+    IEnumerator Test()
+    {
+        i = 0;
+
+        yield return new WaitForSeconds(3);
+        
+        Debug.Log(i);
+    }
+    
+    
+    
+    
+    
 
     
     

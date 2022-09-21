@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using ScratchCardAsset;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class ScratchCheck : MonoBehaviour
 {
+    private EraseProgress EraseProgress; //EraseProgress component reference
     private bool finish;
 
     public float finishProgress = 0.6f;
@@ -17,9 +19,11 @@ public class ScratchCheck : MonoBehaviour
     public float activeDelayTime;
 
     public bool needClear;
-    void Start()
+
+    private float lastProgress;
+    void Awake()
     {
-        
+        EraseProgress = GetComponentInParent<EraseProgress>();
     }
 
     // Update is called once per frame
@@ -45,4 +49,29 @@ public class ScratchCheck : MonoBehaviour
       
         
     }
+
+    private void OnEnable()
+    {
+        EraseProgress.OnProgress += OnEraseProgress;
+    }
+
+    //subscribe to OnProgress event, that invokes when texture scratches
+    
+    private void OnEraseProgress(float progress)
+
+    {
+        Debug.Log(progress);
+        
+        if (progress > lastProgress)
+        {
+            //这里插入函数
+            lastProgress = progress;
+        }
+
+
+    }
+
+    
+
+
 }
