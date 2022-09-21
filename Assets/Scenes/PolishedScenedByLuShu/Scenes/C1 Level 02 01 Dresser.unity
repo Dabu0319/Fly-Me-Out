@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 198623209}
   - component: {fileID: 198623208}
   - component: {fileID: 198623210}
+  - component: {fileID: 198623211}
   m_Layer: 0
   m_Name: "\u7C89\u8272\u9879\u94FE\u67B6"
   m_TagString: Untagged
@@ -557,6 +558,22 @@ MonoBehaviour:
   speed: 1
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
+--- !u!114 &198623211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198623205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 7434549bf5d654b22884e0a200e1b09e, type: 3}
+  playOnceWhenClick: 1
+  playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &299313684
 GameObject:
   m_ObjectHideFlags: 0
@@ -5986,6 +6003,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
   m_PrefabInstance: {fileID: 2024925593}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &698813835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698813831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 2316cef97de9d40258ab7f7135e00279, type: 3}
+  playOnceWhenClick: 0
+  playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!4 &738701490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 39312319733641832, guid: 97fa9bd599e5e46428d2e0cccd1f42a5, type: 3}
@@ -6370,6 +6403,7 @@ GameObject:
   - component: {fileID: 1196138611}
   - component: {fileID: 1196138610}
   - component: {fileID: 1196138612}
+  - component: {fileID: 1196138613}
   m_Layer: 0
   m_Name: "\u7C89\u8272\u5316\u5986\u67B6"
   m_TagString: Untagged
@@ -6536,6 +6570,22 @@ MonoBehaviour:
   speed: 1
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
+--- !u!114 &1196138613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196138607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: a12203ed9f45d4da2bb897302bdf079b, type: 3}
+  playOnceWhenClick: 1
+  playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &1259960654
 GameObject:
   m_ObjectHideFlags: 0
@@ -12155,13 +12205,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishProgress: 0.8
-  inActiveObj: []
+  inActiveObj:
+  - {fileID: 698813831}
   inActiveDelayTime: 0
   activeObj:
   - {fileID: 198623205}
   - {fileID: 637364124}
   activeDelayTime: 0
   needClear: 1
+  soundEffectManager: {fileID: 698813835}
 --- !u!1001 &1873671576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12398,6 +12450,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 11474202, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
+      propertyPath: soundEffectManager
+      value: 
+      objectReference: {fileID: 698813835}
     - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
       propertyPath: RenderType
       value: 1

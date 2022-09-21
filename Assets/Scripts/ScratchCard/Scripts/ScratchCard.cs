@@ -29,7 +29,7 @@ namespace ScratchCardAsset
 		public RenderTexture RenderTexture;
 		public Vector2 BrushScale = Vector2.one;
 		public bool InputEnabled = true;
-		public SoundEffectManager soundEffectManager;
+		//public SoundEffectManager soundEffectManager;
 		[SerializeField]
 		private ScratchMode _mode = ScratchMode.Erase;
 
@@ -116,15 +116,15 @@ namespace ScratchCardAsset
 			{
 				cardInput.Scratch();
 
-				if (!soundEffectManager) return;
-				soundEffectManager.PlaySoundLoop();
+				//if (!soundEffectManager) return;
+				//soundEffectManager.PlaySoundLoop();
 			}
 			else
 			{
 				cardRenderer.IsScratched = false;
 
-				if (!soundEffectManager) return;
-				soundEffectManager.StopSound();
+				//if (!soundEffectManager) return;
+				//soundEffectManager.StopSound();
 			}
 
 			lastFrameId = Time.frameCount;

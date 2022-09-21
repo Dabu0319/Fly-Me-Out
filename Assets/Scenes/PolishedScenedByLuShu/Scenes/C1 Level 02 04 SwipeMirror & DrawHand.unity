@@ -214,6 +214,7 @@ MonoBehaviour:
   - {fileID: 1018992129}
   activeDelayTime: 0
   needClear: 1
+  soundEffectManager: {fileID: 1113379391}
 --- !u!1001 &190397644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,6 +786,7 @@ MonoBehaviour:
   - {fileID: 1954228083}
   activeDelayTime: 0
   needClear: 0
+  soundEffectManager: {fileID: 682391434}
 --- !u!114 &540936626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,7 +838,6 @@ MonoBehaviour:
   RenderTexture: {fileID: 0}
   BrushScale: {x: 0.5, y: 0.5}
   InputEnabled: 1
-  soundEffectManager: {fileID: 0}
   _mode: 0
 --- !u!1 &546346356
 GameObject:
@@ -1117,7 +1118,7 @@ PrefabInstance:
     - target: {fileID: 11474202, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
       propertyPath: soundEffectManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 682391434}
     - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
       propertyPath: RenderType
       value: 1
@@ -1504,6 +1505,7 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: f1eb876353c2c48b7848e447f5f9f546, type: 3}
   playOnceWhenClick: 1
   playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &800452930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2160,7 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: 8523d7a2c8950460592b98682581d54b, type: 3}
   playOnceWhenClick: 0
   playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &1142196145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 121058, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
@@ -2183,6 +2186,7 @@ MonoBehaviour:
   - {fileID: 1777287997}
   activeDelayTime: 0
   needClear: 1
+  soundEffectManager: {fileID: 1302824039}
 --- !u!1 &1153430265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,6 +2279,7 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: ac132008a12a949469c421a6d328ec9c, type: 3}
   playOnceWhenClick: 0
   playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &1322712479
 GameObject:
   m_ObjectHideFlags: 0

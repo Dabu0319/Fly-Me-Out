@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 104518249}
   - component: {fileID: 104518248}
   - component: {fileID: 104518250}
+  - component: {fileID: 104518251}
   m_Layer: 0
   m_Name: "\u82B1\u74F62"
   m_TagString: Untagged
@@ -223,6 +224,22 @@ MonoBehaviour:
   speed: 1
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
+--- !u!114 &104518251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104518247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: ab8a760f377834cf5bda477f88964961, type: 3}
+  playOnceWhenClick: 0
+  playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &118404301
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +796,19 @@ MonoBehaviour:
   targetDis: 1
   afterDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104518251}
+        m_TargetAssemblyTypeName: SoundEffectManager, Assembly-CSharp
+        m_MethodName: PlaySoundOnce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   needBack: 0
   oriPos: {x: 0, y: 0, z: 0}
 --- !u!61 &570353690
@@ -1265,6 +1294,7 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: fb79beceb1cb84cce8a53a9dce57186c, type: 3}
   playOnceWhenClick: 0
   playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1001 &1013576380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1633,7 +1663,19 @@ MonoBehaviour:
   targetDis: 1
   afterDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1207709299}
+        m_TargetAssemblyTypeName: SoundEffectManager, Assembly-CSharp
+        m_MethodName: PlaySoundOnce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   needBack: 0
   oriPos: {x: 0, y: 0, z: 0}
 --- !u!61 &1161209848
@@ -1983,6 +2025,7 @@ GameObject:
   - component: {fileID: 1207709297}
   - component: {fileID: 1207709296}
   - component: {fileID: 1207709298}
+  - component: {fileID: 1207709299}
   m_Layer: 0
   m_Name: "\u76F8\u6846"
   m_TagString: Untagged
@@ -2076,6 +2119,22 @@ MonoBehaviour:
   speed: 1
   color: {r: 0, g: 0, b: 0, a: 0}
   isText: 0
+--- !u!114 &1207709299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207709295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 9d270d960b20b4d81bb5fa411c479746, type: 3}
+  playOnceWhenClick: 0
+  playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &1221051859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2176,19 @@ MonoBehaviour:
   targetDis: 1
   afterDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1207709299}
+        m_TargetAssemblyTypeName: SoundEffectManager, Assembly-CSharp
+        m_MethodName: PlaySoundOnce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   needBack: 0
   oriPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1221051861
@@ -2391,6 +2462,7 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: de1fd5e978ba54b7a9e538ad4facb4cd, type: 3}
   playOnceWhenClick: 1
   playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &1239694631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,7 +2672,19 @@ MonoBehaviour:
   targetDis: 1
   afterDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1207709299}
+        m_TargetAssemblyTypeName: SoundEffectManager, Assembly-CSharp
+        m_MethodName: PlaySoundOnce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   needBack: 0
   oriPos: {x: 0, y: 0, z: 0}
 --- !u!61 &1512038290
@@ -2853,7 +2937,19 @@ MonoBehaviour:
   targetDis: 1
   afterDrag:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1207709299}
+        m_TargetAssemblyTypeName: SoundEffectManager, Assembly-CSharp
+        m_MethodName: PlaySoundOnce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   needBack: 0
   oriPos: {x: 0, y: 0, z: 0}
 --- !u!61 &1597513716

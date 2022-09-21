@@ -21,6 +21,11 @@ public class ScratchCheck : MonoBehaviour
     public bool needClear;
 
     private float lastProgress;
+
+
+    public SoundEffectManager soundEffectManager;
+
+
     void Awake()
     {
         EraseProgress = GetComponentInParent<EraseProgress>();
@@ -66,6 +71,10 @@ public class ScratchCheck : MonoBehaviour
         {
             //这里插入函数
             lastProgress = progress;
+            soundEffectManager.PlaySoundLoop();
+        } else
+        {
+            soundEffectManager.StopSound();
         }
 
 

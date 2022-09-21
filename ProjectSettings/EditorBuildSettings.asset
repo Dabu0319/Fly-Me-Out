@@ -104,4 +104,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PolishedScenedByLuShu/Scenes/C1 Level 02 01 Dresser.unity
     guid: f287ab0c5cb2f46e3a1c3679fbd734a8
+  - enabled: 1
+    path: Assets/Scenes/PolishedScenedByLuShu/Scenes/C1 Level 03 04 Home&Jigsaw.unity
+    guid: 6b7f0b427d944432b9788b0fc6b9f9d8
   m_configObjects: {}

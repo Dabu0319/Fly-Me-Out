@@ -16,6 +16,11 @@ public class WeighPress : MonoBehaviour
 
     public GameObject alarmObj;
     public List<GameObject> finalObj;
+
+    public SoundEffectManager springSoundManager; // 秤的弹簧声
+    public SoundEffectManager alarmSoundManager; // 警报声
+    public SoundEffectManager celebrateSoundManager; // 庆祝声
+    private bool hasPlayedEndSound = false;
     void Start()
     {
         
@@ -29,24 +34,31 @@ public class WeighPress : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                
+                if (springSoundManager)  springSoundManager.PlaySoundLoop();
                 rotateObj.transform.rotation  =  Quaternion.Euler( rotateObj.transform.rotation.eulerAngles + new Vector3(0,0,speed));
                 
             }
             else if(rotateObj.transform.rotation.eulerAngles.z > startAngle)
             {
-                
+                if (springSoundManager) springSoundManager.StopSound();
+                if (alarmSoundManager) alarmSoundManager.StopSound();
                 rotateObj.transform.rotation =  Quaternion.Euler(rotateObj. transform.rotation.eulerAngles - new Vector3(0,0,speed  ));
             }
 
 
             if (rotateObj.transform.rotation.eulerAngles.z > targetAngle / 1.5)
             {
+                if (alarmSoundManager) alarmSoundManager.PlaySoundLoop();
                 alarmObj.SetActive(true);
             }
         }
         else
         {
+            if (springSoundManager) springSoundManager.StopSound();
+            if (alarmSoundManager) alarmSoundManager.StopSound();
+            if (celebrateSoundManager && !hasPlayedEndSound) celebrateSoundManager.PlaySoundOnce();
+            hasPlayedEndSound = true;
+
             alarmObj.SetActive(false);
             foreach (var obj in finalObj)
             {
