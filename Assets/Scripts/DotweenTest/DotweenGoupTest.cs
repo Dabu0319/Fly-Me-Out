@@ -29,6 +29,7 @@ public class DotweenGoupTest : MonoBehaviour
             }
         })); 
         
+        
         // squares[0].DOMoveX(1, Random.Range(1f, 2f)).OnComplete(() =>
         // {
         //     squares[1].DOMoveX(1, Random.Range(1f, 2f)).OnComplete(() =>
