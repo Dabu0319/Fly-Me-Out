@@ -1395,11 +1395,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
+      propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
       propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1565481136}
     - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
+      propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1565481140}
+    - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
       propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
+      propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
@@ -1407,11 +1419,23 @@ PrefabInstance:
       value: CamTrans
       objectReference: {fileID: 0}
     - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
+      propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySoundOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
       propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Click, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
+      propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SoundEffectManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
       propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401832677849359391, guid: d5114f0383bf64740a1e4dfb797dd281, type: 3}
+      propertyPath: afterJigsaw.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1966,6 +1990,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &1565481140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565481133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4954f1c5cd3e34b2a8084399bb3436f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: d5402dcecafc94b9391bbeea6f39cda0, type: 3}
+  playOnceWhenClick: 0
+  playOnceWhenSceneAwake: 0
+  playLoopWhenSceneAwake: 0
 --- !u!1 &1576145318
 GameObject:
   m_ObjectHideFlags: 0

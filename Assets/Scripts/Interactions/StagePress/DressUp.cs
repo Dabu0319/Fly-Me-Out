@@ -28,6 +28,11 @@ public GameObject bar;
     public List<GameObject> finalActiveObj;
     public List<GameObject> finalInActiveObj;
 
+    public SoundEffectManager breathInSoundManager;
+    public SoundEffectManager breathOutSoundManager;
+    public SoundEffectManager buttonSoundManager;
+
+
     void Start()
     {
         barOriColor = barFill.GetComponent<Image>().color;
@@ -55,6 +60,7 @@ public GameObject bar;
             autoZero = false;
             breatheOutImage.SetActive(false);
             breatheInImage.SetActive(true);
+            if (breathInSoundManager) breathInSoundManager.PlaySoundOnce();
 
             if (stageNum == 3)
             {
@@ -68,8 +74,10 @@ public GameObject bar;
             isBreatheIn = false;
             breatheOutImage.SetActive(true);
             breatheInImage.SetActive(false);
+            if (breathOutSoundManager) breathOutSoundManager.PlaySoundOnce();
+
         }
-        
+
         bar.GetComponent<Slider>().value = barValue;
 
         if (autoZero)
@@ -78,9 +86,11 @@ public GameObject bar;
             isBreatheIn = false;
             breatheOutImage.SetActive(true);
             breatheInImage.SetActive(false);
+            if (breathOutSoundManager) breathOutSoundManager.PlaySoundOnce();
+
         }
-            
-            
+
+
         else
         {
             barFill.GetComponent<Image>().color = barOriColor;
@@ -102,6 +112,8 @@ public GameObject bar;
 
                         isBreatheIn = false;
                         autoZero = true;
+
+                        if (buttonSoundManager) buttonSoundManager.PlaySoundOnce();
                         //speed -= 0.05f;
                     }
                     else
@@ -133,6 +145,8 @@ public GameObject bar;
 
                         isBreatheIn = false;
                         autoZero = true;
+
+                        if (buttonSoundManager) buttonSoundManager.PlaySoundOnce();
                         //speed -= 0.05f;
                     }
                     else
@@ -163,6 +177,8 @@ public GameObject bar;
 
                         isBreatheIn = false;
                         autoZero = true;
+
+                        if (buttonSoundManager) buttonSoundManager.PlaySoundOnce();
                         //speed -= 0.05f;
                     }
                     else

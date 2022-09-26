@@ -20,7 +20,8 @@ public class ScratchCheck : MonoBehaviour
 
     public bool needClear;
 
-    private float lastProgress;
+    //private float lastProgress;
+    //private int soundHelper = 0;
 
 
     public SoundEffectManager soundEffectManager;
@@ -65,17 +66,20 @@ public class ScratchCheck : MonoBehaviour
     private void OnEraseProgress(float progress)
 
     {
-        Debug.Log(progress);
-        
-        if (progress > lastProgress)
-        {
-            //这里插入函数
-            lastProgress = progress;
-            soundEffectManager.PlaySoundLoop();
-        } else
-        {
-            soundEffectManager.StopSound();
-        }
+        //if (progress > 0.8) soundHelper = 0;
+        //if (progress > lastProgress)
+        //{
+        //    lastProgress = progress;
+        //    if (soundEffectManager) soundEffectManager.PlaySoundLoop();
+        //} else
+        //{
+        //    if (soundHelper < 10) return;
+        //    if (soundEffectManager)
+        //    {
+        //        soundEffectManager.StopSound();
+        //        soundHelper = 0;
+        //    }
+        //}
 
 
     }

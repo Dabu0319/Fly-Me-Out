@@ -34,25 +34,27 @@ public class SoundEffectManager : MonoBehaviour
 
 
     public void PlaySoundLoop() {
-        if (audioSrc.isPlaying) return;
         audioSrc.volume = 1f;
         audioSrc.loop = true;
+        if (audioSrc.isPlaying) return;
         audioSrc.clip = soundEffect;
         audioSrc.Play();
     }
 
-    public void StopSound() {
+    public void StopSound(bool fade = false) {
         if (!audioSrc.isPlaying) return;
-        StartCoroutine(FadeToZeroVolume());
-    }
-
-    private void OnMouseDown()
-    {
-        if (playOnceWhenClick)
+        //Debug.Log("fade: " + fade);
+        if (fade)
         {
-            PlaySoundOnce();
+            StartCoroutine(FadeToZeroVolume());
+        }
+        else
+        {
+            audioSrc.Stop();
         }
     }
+
+
 
     IEnumerator FadeToZeroVolume() {
         audioSrc.loop = false;
@@ -64,4 +66,11 @@ public class SoundEffectManager : MonoBehaviour
         //audioSrc.volume = 1f;
     }
 
+    private void OnMouseDown()
+    {
+        if (playOnceWhenClick)
+        {
+            PlaySoundOnce();
+        }
+    }
 }
