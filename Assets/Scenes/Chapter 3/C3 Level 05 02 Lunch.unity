@@ -7623,6 +7623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941213812}
   - component: {fileID: 1941213811}
+  - component: {fileID: 1941213813}
   m_Layer: 0
   m_Name: PhysicController
   m_TagString: Untagged
@@ -7664,6 +7665,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941213813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941213810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ed7102aeefe9049bea70e20176f08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeThreshold: 3.6
+  minShakeInterval: 0.2
 --- !u!1 &2114219362
 GameObject:
   m_ObjectHideFlags: 0
